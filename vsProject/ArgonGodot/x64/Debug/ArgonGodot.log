@@ -1,0 +1,8 @@
+﻿  Argon2.cpp
+C:\Users\siets\Documents\Development\godot-projects\Argon2\vsProject\ArgonGodot\Argon2.cpp(43,41): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
+  GodotLibrary.cpp
+  Player.cpp
+  Root.cpp
+  Generating Code...
+     Creating library ..\..\DLL\ArgonGodot.lib and object ..\..\DLL\ArgonGodot.exp
+  ArgonGodot.vcxproj -> C:\Users\siets\Documents\Development\godot-projects\Argon2\DLL\ArgonGodot.dll

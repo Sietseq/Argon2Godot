@@ -1,0 +1,6 @@
+[submodule "godot-cpp"]
+	path = godot-cpp
+	url = https://github.com/godotengine/godot-cpp
+[submodule "phc-winner-argon2"]
+	path = phc-winner-argon2
+	url = https://github.com/P-H-C/phc-winner-argon2.git
