@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
-[ext_resource path="res://KinematicBody2D.gdns" type="Script" id=2]
+[ext_resource path="res://dll/Player.gdns" type="Script" id=2]
 [ext_resource path="res://Argon2.gdns" type="Script" id=3]
 [ext_resource path="res://Main.gd" type="Script" id=4]
 

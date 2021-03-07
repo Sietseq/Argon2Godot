@@ -7,8 +7,10 @@ reloadable=true
 
 [entry]
 
-Windows.64="res://ArgonGodot.dll"
+Windows.64="res://dll/ArgonGodot.dll"
+Windows.32="res://dll/ArgonGodot.dll"
 
 [dependencies]
 
 Windows.64=[  ]
+Windows.32=[  ]
