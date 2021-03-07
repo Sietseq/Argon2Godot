@@ -1,16 +1,18 @@
 extends Node2D
 
+onready var TextEdit = $TextEdit
+onready var Label = $Label
+onready var Button = $Button
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var rng = RandomNumberGenerator.new()
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	$Node.RawHash()
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _on_Button_pressed():
+	Button.disabled = true
+	
+	var result : String
+	var salt = rng.randi_range(1000000000000000, 9999999999999999)
+	result = $Argon2.RawHash(TextEdit.text, salt)
+	
+	Label.text = result
+	Button.disabled = false
+	TextEdit.text = ""

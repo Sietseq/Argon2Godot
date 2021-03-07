@@ -23,7 +23,7 @@ namespace godot
 
 		// Gameplay methods
 	public:
-		void RawHash();
+		String RawHash(String str);
 
 	private:
 

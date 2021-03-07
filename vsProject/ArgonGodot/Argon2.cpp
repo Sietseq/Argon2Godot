@@ -5,9 +5,12 @@
 #include <string.h>
 #include <stdlib.h>
 
+#include <sstream>
+#include <iomanip>
+
+
 #define HASHLEN 32
 #define SALTLEN 16
-#define PWD "sietse"
 
 using namespace godot;
 
@@ -31,16 +34,19 @@ Argon2::~Argon2()
 	// Clean up
 }
 
-void Argon2::RawHash()
+String Argon2::RawHash(String str)
 {
+    std::string string = str.alloc_c_string(); // Godot string to c string
+    const char* cstr = string.c_str(); // c string to a const char array
+
+    uint8_t* pwd = (uint8_t*)_strdup(cstr); // const char array to uint8_t array
+    uint32_t pwdlen = strlen((char*)pwd); // Length of the password
+
     uint8_t hash1[HASHLEN];
     uint8_t hash2[HASHLEN];
 
     uint8_t salt[SALTLEN];
     memset(salt, 0x00, SALTLEN);
-
-    uint8_t* pwd = (uint8_t*)_strdup(PWD);
-    uint32_t pwdlen = strlen((char*)pwd);
 
     uint32_t t_cost = 2;            // 2-pass computation
     uint32_t m_cost = (1 << 16);      // 64 mebibytes memory usage
@@ -73,14 +79,30 @@ void Argon2::RawHash()
         exit(1);
     }
 
-    for (int i = 0; i < HASHLEN; ++i) printf("%02x", hash1[i]); printf("\n");
+    //for (int i = 0; i < HASHLEN; ++i) printf("%02x", hash1[i]); printf("\n");
     if (memcmp(hash1, hash2, HASHLEN))
     {
-        for (int i = 0; i < HASHLEN; ++i)
+        /*for (int i = 0; i < HASHLEN; ++i)
         {
             printf("%02x", hash2[i]);
-        }
+        }*/
         printf("\nfail\n");
     }
     else printf("ok\n");
+
+
+    static constexpr char hex[] = "0123456789abcdef";  // Hex values
+    String result("0000000000000000000000000000000000000000000000000000000000000000");   // Result string
+
+    // Loops through the hash and turns it into a godot string
+    int x = 0;
+    for (int i = 0; i < HASHLEN; ++i)
+    {
+        result[x] = hex[hash1[i] / 16];
+        x++;
+        result[x] = hex[hash1[i] % 16];
+        x++;
+    }
+
+    return result;
 }

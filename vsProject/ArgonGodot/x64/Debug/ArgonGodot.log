@@ -1,4 +1,5 @@
-﻿  Argon2.cpp
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(477,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  Argon2.cpp
 C:\Users\siets\Documents\Development\godot-projects\Argon2\vsProject\ArgonGodot\Argon2.cpp(43,41): warning C4267: 'initializing': conversion from 'size_t' to 'uint32_t', possible loss of data
   GodotLibrary.cpp
   Player.cpp
