@@ -84,13 +84,13 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\..\DLL</OutDir>
+    <OutDir>..\..\bin</OutDir>
     <IncludePath>C:\Users\siets\Documents\Development\godot-projects\Argon2\godot-cpp\include;C:\Users\siets\Documents\Development\godot-projects\Argon2\godot-cpp\include\core;C:\Users\siets\Documents\Development\godot-projects\Argon2\godot-cpp\include\gen;C:\Users\siets\Documents\Development\godot-projects\Argon2\godot-cpp\godot-headers;C:\Users\siets\Documents\Development\godot-projects\Argon2\phc-winner-argon2\include;C:\Users\siets\Documents\Development\godot-projects\Argon2\phc-winner-argon2\src;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Users\siets\Documents\Development\godot-projects\Argon2\godot-cpp\bin;C:\Users\siets\Documents\Development\godot-projects\Argon2\phc-winner-argon2\vs2015\build;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\..\DLL</OutDir>
+    <OutDir>..\..\bin</OutDir>
     <IncludePath>C:\Users\siets\Documents\Development\godot-projects\Argon2\godot-cpp\include;C:\Users\siets\Documents\Development\godot-projects\Argon2\godot-cpp\include\core;C:\Users\siets\Documents\Development\godot-projects\Argon2\godot-cpp\include\gen;C:\Users\siets\Documents\Development\godot-projects\Argon2\godot-cpp\godot-headers;C:\Users\siets\Documents\Development\godot-projects\Argon2\phc-winner-argon2\include;C:\Users\siets\Documents\Development\godot-projects\Argon2\phc-winner-argon2\src;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Users\siets\Documents\Development\godot-projects\Argon2\godot-cpp\bin;C:\Users\siets\Documents\Development\godot-projects\Argon2\phc-winner-argon2\vs2015\build;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
